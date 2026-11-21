@@ -34,7 +34,7 @@ jobs:
 
       - name: Build Windows EXE
         working-directory: source/restaurant_pos_starter/admin
-        run: npm run desktop:dist:win
+        run: npm run build && npx electron-builder --win nsis --x64
 
       - name: Upload installer
         uses: actions/upload-artifact@v4
